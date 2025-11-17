@@ -1,0 +1,464 @@
+/* Підключення шрифту */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Базові та глобальні стилі */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('bg.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-color: #1a1a1a; 
+    color: #f0f0f0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+/* Загальні стилі для кнопок та посилань*/
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: #FFD700;
+    color: #1a1a1a;
+}
+
+    .btn-primary:hover {
+        background-color: #ffc400;
+    }
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+    .btn-success:hover {
+        background-color: #218838;
+    }
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+
+/*Стилі для шапки */
+header {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #FFD700;
+    padding: 1rem 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header nav li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    header nav li a:hover {
+        color: #FFD700;
+    }
+
+/*Стилі для футера*/
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f0f0f0;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+    .footer-links a:hover {
+        text-decoration: underline;
+        color: #FFD700;
+    }
+
+/*Стилі для головної сторінки */
+.page-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(44, 44, 44, 0.8); 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero {
+    padding: 100px 0;
+    background-color: rgba(44, 44, 44, 0.8); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+    .hero .container {
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        color: #FFD700;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        color: #f0f0f0;
+        margin-bottom: 30px;
+    }
+
+.about-us-section {
+    background-color: rgba(44, 44, 44, 0.8); 
+    padding: 40px 0;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+    .about-us-section .container {
+        padding: 0 20px;
+    }
+
+    .about-us-section h2 {
+        color: #FFD700;
+        margin-bottom: 20px;
+    }
+
+/*Стилі для слайдера */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+    display: none;
+}
+
+    .slide.active {
+        display: block;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+    .slide-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: #FFD700;
+    }
+
+    .slide-content p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: #f0f0f0;
+    }
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+.dots-container {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #666;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+    .dot.active {
+        background-color: #FFD700;
+    }
+
+/*Стилі для меню*/
+.category-section {
+    margin-bottom: 40px; 
+    background-color: rgba(44, 44, 44, 0.8); 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+    .category-section h2 {
+        color: #FFD700;
+        border-bottom: 2px solid #FFD700;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+.menu-dishes {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.dish-card {
+    background-color: rgba(44, 44, 44, 0.9); 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #f0f0f0;
+    flex: 1 1 250px; 
+    max-width: calc(33.33% - 20px); 
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    .dish-card img {
+        max-width: 100%;
+        height: 150px; 
+        object-fit: cover; 
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .dish-card h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #FFD700;
+    }
+
+    .dish-card .description {
+        font-size: 0.9em;
+        color: #ccc;
+        flex-grow: 1; 
+        margin-bottom: 15px;
+    }
+
+    .dish-card .price {
+        font-weight: bold;
+        color: #FFD700;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+.add-to-cart-btn {
+    background-color: #FFD700;
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 100%; 
+}
+
+    .add-to-cart-btn:hover {
+        background-color: #ffc400;
+    }
+
+/*Стилі для адмін-панелі */
+.admin-panel-container {
+    padding: 20px;
+    background-color: rgba(26, 26, 26, 0.8); 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.admin-section {
+    background-color: rgba(44, 44, 44, 0.8); 
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+    .admin-section h2 {
+        border-bottom: 2px solid #FFD700;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        color: #FFD700;
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #f0f0f0;
+    background-color: rgba(44, 44, 44, 0.8); 
+}
+
+table, th, td {
+    border: 1px solid #444;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(51, 51, 51, 0.9); 
+    color: #FFD700;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(37, 37, 37, 0.9); 
+}
+
+/* Загальні стилі для форм */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"], input[type="number"], input[type="tel"], input[type="email"], input[type="password"], textarea, select {
+    padding: 10px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #f0f0f0;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #FFD700;
+    color: #1a1a1a;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+    input[type="submit"]:hover {
+        background-color: #ffc400;
+    }
